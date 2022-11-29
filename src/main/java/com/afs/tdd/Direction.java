@@ -8,6 +8,11 @@ public enum Direction {
         return getDirection(increment);
     }
 
+    public Direction right() {
+        int increment = 1;
+        return getDirection(increment);
+    }
+
     private Direction getDirection(int increment) {
         int directionCount = Direction.values().length;
 
