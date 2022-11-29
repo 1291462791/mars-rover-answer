@@ -1,6 +1,7 @@
 package com.afs.tdd;
 
-public class MoveCommand{
+public class MoveCommand implements Command{
+    @Override
     public RoverStatus execute(RoverStatus roverStatus) {
         Direction direction = roverStatus.getDirection();
         int positionX = roverStatus.getPositionX();

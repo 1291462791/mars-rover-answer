@@ -17,18 +17,7 @@ public class MarsRover {
 
     private void executeCommand(String command) {
         if (!command.isEmpty()) {
-            if (command.equalsIgnoreCase("M")) {
-                MoveCommand moveCommand = new MoveCommand();
-                moveCommand.execute(roverStatus);
-            }
-            if (command.equalsIgnoreCase("L")) {
-                LeftCommand leftCommand = new LeftCommand();
-                leftCommand.execute(roverStatus);
-            }
-            if (command.equals("R")) {
-                RightCommand rightCommand = new RightCommand();
-                rightCommand.execute(roverStatus);
-            }
+            roverStatus = new CommandFactory().build(command).execute(roverStatus);
         }
     }
 
